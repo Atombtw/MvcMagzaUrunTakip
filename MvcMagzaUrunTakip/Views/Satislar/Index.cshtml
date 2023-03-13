@@ -1,0 +1,30 @@
+﻿@using MvcMagzaUrunTakip.Models.Entity;
+@model List<Tbl_Satis>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ürün</th>
+        <th>Personel</th>
+        <th>Müşteri</th>
+        <th>Fiyat</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SatısID</td>
+            <td>@item.Tbl_Urunler.UrunAd</td>
+            <td>@item.Tbl_Personel.PersonelAd</td>
+            <td>@item.Tbl_Musteri.MusteriAd</td>
+            <td>@item.SatısFiyat</td>
+            <td>@item.SatısTarih</td>
+        </tr>
+    }
+</table>
+<a href="/Satislar/Yeni/" class="btn btn-primary">Satış Yap</a>

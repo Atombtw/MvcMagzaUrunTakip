@@ -1,0 +1,18 @@
+﻿@using MvcMagzaUrunTakip.Models.Entity
+@model List<Tbl_Admin>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kullanıcı Adı</th>
+        <th>Şifre</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Kullanici</td>
+            <td>@item.Sifre</td>
+        </tr>
+    }
+</table>

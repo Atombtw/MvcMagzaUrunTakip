@@ -1,0 +1,23 @@
+﻿@model MvcMagzaUrunTakip.Models.Entity.Tbl_Personel
+
+@{
+    ViewBag.Title = "Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Güncelle", "Personel", FormMethod.Post))
+{
+    <h2>Personel Güncelleme</h2>
+    <br />
+    <label>Ad</label>
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    <br />
+    <label>Soyad</label>
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    <br />
+    <label>Departman</label>
+    @Html.TextBoxFor(x => x.PersonelDepartman, new { @class = "form-control" })
+    <br />
+    @Html.HiddenFor(x => x.PersonelID)
+    <button class="btn btn-warning">Güncelle</button>
+}

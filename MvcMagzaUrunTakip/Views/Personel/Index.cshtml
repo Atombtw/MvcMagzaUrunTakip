@@ -1,0 +1,32 @@
+﻿@using MvcMagzaUrunTakip.Models.Entity;
+@model List<Tbl_Personel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Departman</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PersonelID</td>
+            <td>@item.PersonelAd</td>
+            <td>@item.PersonelSoyad</td>
+            <td>@item.PersonelDepartman</td>
+            <td>
+                <a href="/Personel/Sil/@item.PersonelID" class="btn btn-danger">Sil</a>
+                <a href="/Personel/Güncelle/@item.PersonelID" class="btn btn-success">Güncelle</a>
+            </td>
+        </tr>
+
+    }
+</table>
+<a href="/Personel/Yeni/" class="btn btn-primary">Yeni Personel</a>

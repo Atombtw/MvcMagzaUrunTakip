@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h2>Yeni Personel Ekleme</h2>
+    <br />
+    <label>Adı</label>
+    <input type="text" class="form-control" name="PersonelAd" />
+    <br />
+    <label>Soyad</label>
+    <input type="text" class="form-control" name="PersonelSoyad" />
+    <br />
+    <label>Departman</label>
+    <input type="text" class="form-control" name="PersonelDepartman" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

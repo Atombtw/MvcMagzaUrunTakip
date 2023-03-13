@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04d5870489b84b7489c9e1a4d6d029d6" Name="Diagram1">
+        <EntityTypeShape EntityType="DbMvcStokModel.Tbl_Kategori" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcStokModel.Tbl_Musteri" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcStokModel.Tbl_Personel" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcStokModel.Tbl_Satis" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcStokModel.Tbl_Urunler" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DbMvcStokModel.FK_Tbl_Urunler_Tbl_Kategori" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMvcStokModel.FK_Tbl_Satis_Tbl_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMvcStokModel.FK_Tbl_Satis_Tbl_Personel" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMvcStokModel.FK_Tbl_Satis_Tbl_Urunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbMvcStokModel.Tbl_Admin" Width="1.5" PointX="5.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

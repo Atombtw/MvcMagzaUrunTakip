@@ -1,0 +1,31 @@
+﻿@model MvcMagzaUrunTakip.Models.Entity.Tbl_Urunler
+
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h2>Yeni Ürün Ekleme</h2>
+    <br />
+    <label>Ad</label>
+    <input type="text" class="form-control" name="UrunAd" />
+    <br />
+    <label>Marka</label>
+    <input type="text" class="form-control" name="UrunMarka" />
+    <br />
+    <label>Stok</label>
+    <input type="text" class="form-control" name="UrunStok" />
+    <br />
+    <label>Alış Fiyat</label>
+    <input type="text" class="form-control" name="UrunAlisFiyat" />
+    <br />
+    <label>Satış Fiyat</label>
+    <input type="text" class="form-control" name="UrunSatisFiyat" />
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.Tbl_Kategori.KategoriID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

@@ -1,0 +1,26 @@
+﻿@model MvcMagzaUrunTakip.Models.Entity.Tbl_Musteri
+
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h2>Yeni Musteri Ekleme</h2>
+    <br />
+    <label>Ad</label>
+    <input type="text" class="form-control" name="MusteriAd" />
+    @Html.ValidationMessageFor(x => x.MusteriAd, "", new { @style = "color:red" })
+    <br />
+    <label>Soyad</label>
+    <input type="text" class="form-control" name="MusteriSoyad" />
+    @Html.ValidationMessageFor(x => x.MusteriSoyad, "", new { @style = "color:red" })
+    <br />
+    <label>Şehir</label>
+    <input type="text" class="form-control" name="MusteriSehir" />
+    <br />
+    <label>Bakiye</label>
+    <input type="text" class="form-control" name="MusteriBakiye" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
